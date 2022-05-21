@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,300;1,500;1,600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Code Pro', monospace;
+    background-color: #313e4f;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.task-counter {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.5em auto;
+}
+
+.heading {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container {
+    height: 65vh;
+    width: 80%;
+    margin: auto;
+    box-sizing: content-box;
+    border: 30px solid #ebfffa;
+    border-top: 25px solid #ebfffa;
+    border-radius: 10px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    scrollbar-width: thin;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+    .input-div {
+        z-index: 2;
+        position: fixed;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+[type='text'] {
+    width: 100%;
+    border: none;
+    background-color: #313e4f;
+    font-size: 1.5rem;
+    font-family: 'Source Code Pro', monospace;
+    padding-left: 1em;
+    outline: none;
+    color: #757575;
+    border-radius: 5px;
+
+    &:focus {
+        color: white;
+    }
+}
+
+#add {
+    background-color: #6ef3d6;
+    border: none;
+    padding: 0.20em 0.45em;
+    font-size: 2.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.task {
+    position: relative;
+    top: 70px;
+    display: flex;
+    padding: 0.5em;
+
+    border-bottom: 1px solid #1a73e8;
+    align-items: center;
+
+    transition: background-color 0.3s ease-in,
+        color 0.3s ease-in;
+
+    [type='checkbox'] {
+        width: 2em;
+        height: 2em;
+    }
+
+    .number {
+        font-size: 2rem;
+        padding: 0 0.5em;
+        white-space: pre-wrap;
+    }
+
+    button {
+        background-color: #1a73e8;
+        color: white;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: all 0.3s ease-in;
+    }
+
+    .work {
+        display: inline-block;
+        font-size: 2rem;
+        width: 100%;
+        padding: 0 0.5em;
+        white-space: pre-wrap;
+        height: 40px;
+        line-height: 1.2;
+        // text-align: center;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-transform: capitalize;
+    }
+
+    .delete:hover {
+        color: #dc3545;
+        background-color: white;
+    }
+
+    .up:hover {
+        color: #5cb85c;
+        background-color: white;
+    }
+
+    .down:hover {
+        color: #5cb85c;
+        background-color: white;
+    }
+}
+
+.task :nth-child(5) {
+    margin-inline: 10px;
+}
+
+
+.hide {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+}

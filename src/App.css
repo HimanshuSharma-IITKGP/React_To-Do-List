@@ -1,38 +1,168 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,300;1,500;1,600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Code Pro', monospace;
+  background-color: #313e4f;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.task-counter {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0.5em auto;
+}
+
+.heading {
+  color: white;
+  font-size: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  height: 65vh;
+  width: 80%;
+  margin: auto;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border: 30px solid #ebfffa;
+  border-top: 25px solid #ebfffa;
+  border-radius: 10px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  scrollbar-width: thin;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container .input-div {
+  z-index: 2;
+  position: fixed;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+[type='text'] {
+  width: 100%;
+  border: none;
+  background-color: #313e4f;
+  font-size: 1.5rem;
+  font-family: 'Source Code Pro', monospace;
+  padding-left: 1em;
+  outline: none;
+  color: #757575;
+  border-radius: 5px;
+}
+
+[type='text']:focus {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#add {
+  background-color: #6ef3d6;
+  border: none;
+  padding: 0.20em 0.45em;
+  font-size: 2.5rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task {
+  position: relative;
+  top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5em;
+  border-bottom: 1px solid #1a73e8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
+
+.task [type='checkbox'] {
+  width: 2em;
+  height: 2em;
+}
+
+.task .number {
+  font-size: 2rem;
+  padding: 0 0.5em;
+  white-space: pre-wrap;
+}
+
+.task button {
+  background-color: #1a73e8;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.task .work {
+  display: inline-block;
+  font-size: 2rem;
+  width: 100%;
+  padding: 0 0.5em;
+  white-space: pre-wrap;
+  height: 40px;
+  line-height: 1.2;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-transform: capitalize;
+}
+
+.task .delete:hover {
+  color: #dc3545;
+  background-color: white;
+}
+
+.task .up:hover {
+  color: #5cb85c;
+  background-color: white;
+}
+
+.task .down:hover {
+  color: #5cb85c;
+  background-color: white;
+}
+
+.task :nth-child(5) {
+  margin-inline: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+/*# sourceMappingURL=App.css.map */
